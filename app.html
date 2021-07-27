@@ -13,6 +13,9 @@
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/site.css">
     <link rel="icon" type="image/png" href="/img/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:ital,wght@1,300&family=Roboto:ital,wght@1,300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -25,7 +28,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <ul class="title-font navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
@@ -53,17 +56,17 @@
         <div class="row row-cols-1 row-cols-lg-2 mt-5">
             <div class="col border-end border-2">
                 <div>
-                <h2>FIZZ BUZZ: A Coding Project</h2>
-                <p>When it counts, you FIZZ BUZZ. A Javascript coding exercise using loops. Write a program that displays numbers from 1 to 100. Multiples of '3' display <strong>"Fizz"</strong> in place of the number and multiples of '5' display <strong>"Buzz"</strong>. If a number is a multiple of both '3' and '5', display <strong>"FizzBuzz"</strong>.</p>
+                <h2 class="title-font">FIZZ BUZZ: A Coding Project</h2>
+                <p class="body-font">When it counts, you FIZZ BUZZ. A Javascript coding exercise using loops. Write a program that displays numbers from 1 to 100. Multiples of '3' display <strong>"Fizz"</strong> in place of the number and multiples of '5' display <strong>"Buzz"</strong>. If a number is a multiple of both '3' and '5', display <strong>"FizzBuzz"</strong>.</p>
             </div>
             <div class="mt-2">
-                <h2>Instructions</h2>
-                <p>Enter a starting and ending value and press the button to find your FizzBuzz.</p>
+                <h2 class="title-font">Instructions</h2>
+                <p class="body-font">Enter a starting and ending value and press the button to find your FizzBuzz.</p>
             </div>
             </div>
             <!--APP-->
             <div class="col">
-                <h5>Enter Values</h5>
+                <h5 class="title-font">Enter Values</h5>
                 <form class="row gy-2 gx-3">
                     <div class="col">
                     <input type="number" id="startValue" class="form-control" placeholder="0" value="1" aria-label="Starting Value">
@@ -72,10 +75,10 @@
                     <input type="number" id="endValue" class="form-control" placeholder="100" value="100" aria-label="Ending Value">
                 </div>
                 <div  class="col-12 d-flex justify-content-start justify-content-md-end mt-3">
-                    <button id="btnSubmit" type="button" class="btn btn-dark btn-large">Fizz Buzz</button>
+                    <button id="btnSubmit" type="button" class="body-font btn btn-outline-dark btn-large">Fizz Buzz</button>
                 </div>
                 </form>
-                <h2 class="border-bottom border-2">Results</h2>
+                <h3 class="title-font border-bottom border-2">Results</h3>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <tbody id="results">
@@ -97,7 +100,7 @@
                     <div><span class="text-muted">&copy;2021</span> Courtney Rohrer | ncrohrer@gmail.com</div>
                </div>
                <div class="col d-flex align-items-center justify-content-center">
-                    <img src="/img/COURTNEY ROHRER (2).svg" alt="Courtney Rohrer Logo" height="30"/>
+                    <img src="/img/COURTNEY ROHRER (3).svg" alt="Courtney Rohrer Logo" height="30"/>
                </div>
                <div class="col order-first order-lg-last d-flex align-items-center justify-content-center justify-content-lg-end">
                     <div class="row">

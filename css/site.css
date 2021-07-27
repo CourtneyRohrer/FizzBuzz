@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1d5888;
-    --secondary-color: #ff0000;
+    --primary-color: #114a79;
+    --secondary-color: #81acc5;
     --dark-color: #292929;
     --white-color: #ffffff;
 }
@@ -25,6 +25,14 @@ h1,h2,h3,h4,h5,h6 {
 
 main>.container {
     padding: 60px 15px 0;
+}
+
+.title-font {
+    font-family: 'Lora', serif;
+}
+
+.body-font {
+    font-family: 'Roboto', sans-serif;
 }
 
 .sticky-nav {
