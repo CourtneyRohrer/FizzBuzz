@@ -6,31 +6,31 @@
         let endValue = document.getElementById("endValue").value;
     
 
-    //Parse into Intergers
-    startValue = parseInt(startValue);
-    endValue = parseInt(endValue);
+        //Parse into Intergers
+            startValue = parseInt(startValue);
+            endValue = parseInt(endValue);
 
-    if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-        //we call generateNumbers
-        let numbers = generateNumbers(startValue, endValue);
-        //we call displayNumbers
-        displayNumbers(numbers);
+        if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+             //we call generateNumbers
+            let numbers = generateNumbers(startValue, endValue);
+            //we call displayNumbers
+            displayNumbers(numbers);
 
-    } else {
-        alert("You must enter numbers")
-    }
+        } else {
+            alert("You must enter numbers")
+        }
 }
 
 //Generate Numbers from the start start value to the end value
 //LOGIC FUNCTION
 
-function generateNumbers(startValue, endValue){
-    let numbers = [];
+    function generateNumbers(startValue, endValue){
+        let numbers = [];
 
     for (let index = startValue; index <= endValue; index++) {
         numbers.push(index);
         
-    }
+        }
 
     return numbers;
 }
@@ -41,26 +41,34 @@ function generateNumbers(startValue, endValue){
 //Change multiples of both to "FizzBuzz"
 //VIEW FUNCTION
 
-function displayNumbers(numbers){
+    function displayNumbers(numbers){
 
-    let templateRows = "";
-    for (let index = 0; index < numbers; index++) {
-
+        let templateRows = "";
+        let currentRow = "<tr>";
+    for (let index = 0; index < numbers.length; index++) { 
+    
+        let className = "";
         let number = numbers[index];
         
-      if (number % 3 && number % 5) {
-          document.write("FizzBuzz")
-      } else {
-          if (number % 3) {
-              document.write("Fizz")
-          }
-          if (number % 5) {
-              document.write("Buzz")
-          }
-      }    
-        
-        templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+        if (number % 3 == 0 && number % 5 == 0 ) {
+            number = "FizzBuzz";
+            className = "fizzbuzz";
+        } else if (number % 3 == 0 ) {
+           number = "Fizz";
+           className = "fizz";
+        } if (number % 5 == 0 ) {
+            number = "Buzz";
+            className = "buzz";
+        }
+
+        if (index % 5 == 0) {
+            currentRow += "<tr>" //starting a new row
+            templateRows += currentRow; //adding table data to the row
+            currentRow = "</tr>"; //ending the current row
+        }
+
+         currentRow += `<td class=" ${className}">${number}</td>`; //adding data to the table
     }
 
-    document.getElementById("results").innerHTML = templateRows;
+        document.getElementById("results").innerHTML = templateRows;
 }

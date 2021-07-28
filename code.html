@@ -59,11 +59,81 @@
     <h2 class="title-font border-1 border-bottom border-dark">The Code for FIZZ BUZZ</h2>
     <div class="row row-cols-1 row-cols-lg-2">
         <div class="col-lg-8">
-            <pre class="line-numbers"><code class="language-javascript">
-                //Call Hello World 
-                function helloWorld(){
-                    alert("Hello World");
-                }
+            <pre class="line-numbers"><code class="language-javascript">            
+//Get the starting and ending values from the page
+//CONTROLLER FUNCTION
+    function getValues(){
+        let startValue = document.getElementById("startValue").value;
+        let endValue = document.getElementById("endValue").value;
+    
+
+        //Parse into Intergers
+            startValue = parseInt(startValue);
+            endValue = parseInt(endValue);
+
+        if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+             //we call generateNumbers
+            let numbers = generateNumbers(startValue, endValue);
+            //we call displayNumbers
+            displayNumbers(numbers);
+
+        } else {
+            alert("You must enter numbers")
+        }
+}
+
+//Generate Numbers from the start start value to the end value
+//LOGIC FUNCTION
+
+    function generateNumbers(startValue, endValue){
+        let numbers = [];
+
+    for (let index = startValue; index <= endValue; index++) {
+        numbers.push(index);
+        
+        }
+
+    return numbers;
+}
+
+//Display the numbers from the starting to ending values 
+//Change multiples of 3 to "Fizz"
+//Change multiples of 5 to "Buzz"
+//Change multiples of both to "FizzBuzz"
+//VIEW FUNCTION
+
+    function displayNumbers(numbers){
+
+        let templateRows = "";
+        let currentRow = "<tr>";
+    for (let index = 0; index < numbers.length; index++) { 
+    
+        let className = "";
+        let number = numbers[index];
+        
+        if (number % 3 == 0 && number % 5 == 0 ) {
+            number = "FizzBuzz";
+            className = "fizzbuzz";
+        } else if (number % 3 == 0 ) {
+           number = "Fizz";
+           className = "fizz";
+        } if (number % 5 == 0 ) {
+            number = "Buzz";
+            className = "buzz";
+        }
+
+        if (index % 5 == 0) {
+            currentRow += "&lt;tr>" //starting a new row
+            templateRows += currentRow; //adding table data to the row
+            currentRow = "&lt;/tr>"; //ending the current row
+        }
+
+         currentRow += `&lt;td>&lt; class=" ${className}">${number}&lt;/td>`; //adding data to the table
+    }
+
+        document.getElementById("results").innerHTML = templateRows;
+}
+
             </code></pre>
         </div>
         <div class="col-lg-4 body-font">

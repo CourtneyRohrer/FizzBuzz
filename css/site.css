@@ -35,6 +35,19 @@ main>.container {
     font-family: 'Roboto', sans-serif;
 }
 
+.fizz {
+    color: rgb(56, 136, 56);
+}
+
+.buzz {
+    color: #4178a5;
+}
+
+.fizzbuzz {
+    color: #E44D26;
+    font-weight: bold;
+}
+
 .sticky-nav {
     position: fixed;
     left: 0;
