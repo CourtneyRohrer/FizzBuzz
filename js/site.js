@@ -1,4 +1,3 @@
-
 //Get the starting and ending values from the page
 //CONTROLLER FUNCTION
     function getValues(){
@@ -12,9 +11,9 @@
 
         if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
              //we call generateNumbers
-            let numbers = generateNumbers(startValue, endValue);
+            let fbArray = generateNumbers(startValue, endValue);
             //we call displayNumbers
-            displayNumbers(numbers);
+            displayNumbers(fbArray);
 
         } else {
             alert("You must enter numbers")
@@ -41,14 +40,14 @@
 //Change multiples of both to "FizzBuzz"
 //VIEW FUNCTION
 
-    function displayNumbers(numbers){
+    function displayNumbers(fbArray){
 
         let templateRows = "";
         let currentRow = "<tr>";
-    for (let index = 0; index < numbers.length; index++) { 
+    for (let index = 0; index <= fbArray.length; index++) { 
     
         let className = "";
-        let number = numbers[index];
+        let number = fbArray[index];
         
         if (number % 3 == 0 && number % 5 == 0 ) {
             number = "FizzBuzz";
