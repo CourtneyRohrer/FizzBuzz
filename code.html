@@ -13,7 +13,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/site.css">
-    <link rel="icon" type="image/png" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="/img/favicon1-32x32.png">
     <link rel="stylesheet" href="/css/prism.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
 <!-- === NAV SECTION === -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-content-center" href="#"><img src="/img/favicon-32x32.png" class="me-3 d-inline-block align-text-top" alt="Courtney Rohrer Logo" width="32" height="32"> FIZZ BUZZ</a>
+        <a class="navbar-brand title-font" href="index.html"><img src="/img/favicon-32x32.png" class="me-3 d-inline-block align-text-top" alt="Courtney Rohrer Logo" width="32" height="32"> FIZZ BUZZ</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,10 +42,10 @@
                     <a class="nav-link active" aria-current="page" href="code.html">Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://github.com/CourtneyRohrer">Github</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/CourtneyRohrer/FizzBuzz">Github</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">About</a>
+                    <a class="nav-link" target="_blank" href="https://courtneyrohrer.netlify.app/">About</a>
                 </li>
             </ul>
         </div>
@@ -136,10 +136,20 @@
 
             </code></pre>
         </div>
-        <div class="col-lg-4 body-font">
-            <p>The Code is Structured in one Function</p>
-            <h5>Hello World</h5>
-            <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+        <div class="col-lg-4">
+            <h3 class="title-font mt-2">A breakdown of my Functions</h3>
+            <h5>getValues</h5>
+            <p><strong>getValues </strong>is a function that receives the input from the page. It uses the <strong>getElementById</strong> to pull the values from the page. It then passes the values to the <strong>generateNumbers </strong>function which returns an array of values and passes the array to the <strong>displayNumbers </strong>function.</p>
+            <hr>
+            <h5>generateNumbers</h5>
+            <p> <strong>generateNumbers</strong> takes in two parameters. The <strong>startValue</strong> and <strong>endValue</strong> inputted by the user. A variable is then created that holds an array. A for loop is used to generate all of the numbers between the <strong>startValue </strong>and the <strong>endValue.</strong></p>
+            <hr>
+            <h5>displayNumbers</h5>
+            <p><strong>displayNumbers</strong> takes in the parameters set by the previous functions.
+                The function then displays the numbers selected by the users <strong>startValue</strong> and <strong>endValue.</strong>
+                I have created classes in CSS that are being passed through to the function through the <strong>className </strong> variable which instructs the multiples of three to display in <strong class="fizz">green</strong>, the multiples of five to display in <strong class="buzz">blue</strong> and the multiples of both three and five to display in <strong class="fizzbuzz">red</strong>.    
+            </p>
+            <p>A for loop is used to check which numbers are multiples of three, which are multiples of five and which are multiples of both. I am using the (%) remainder operator to see if a number can be divided by three, five or both. If a number can be divided by three and five and returns a remainder of 0 then the number is changed to <strong class="fizzbuzz">Fizzbuzz</strong>, the color is changed to red and displayed in <strong>bold. </strong> If it is divisable by three (else if) and returns a remainder of 0 then the number is changed to <strong class="fizz">Fizz</strong> and displayed in green. If the number is divisable by five (if) and returns a remainder of 0 then the number is changed to <strong class="buzz">Buzz</strong> and is displayed in blue. The loop is run through the <strong>templateRows </strong>variable and has the <strong>className</strong> introduced through the HTML row used for display until the <strong>endValue </strong>has been met. I have also added in a function to display the content in a table format through starting and ending a new row with <strong>currentRow</strong> and adding in the table data with <strong>templateRow.</strong></p> 
         </div>
     </div>
 </div>
